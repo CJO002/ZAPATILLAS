@@ -1,0 +1,16 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+    	{% for zapatilla in zapatillas_list %}
+    	    <h2> {{ zapatilla.modelo }} <b>{{ zapatilla.color }}</b> </h2>
+    	    <p> {{ zapatilla.talle }} </p>
+            <div>
+{% if zapatilla.foto %}
+                <img src="{{ zapatilla.foto.url }}" alt="{{ zapatilla.modelo}} {{zapatilla.color}} {{zapatilla.talle}}">
+{% endif %}
+            </div>
+        {% endfor %}
+    </body>
+</html>
